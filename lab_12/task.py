@@ -14,7 +14,6 @@ initial_data = [
     {"Name": "Oleg", "Surname": "Zaitsev", "Patronymic": "Mykhailovych", "Birthdate": "2001-06-12", "Gender": "Male"}
 ]
 
-# Перевірка наявності файлу "Data.json"
 if not os.path.exists("Data.json"):
     with open("Data.json", "w") as file:
         json.dump(initial_data, file)
@@ -44,7 +43,7 @@ while True:
                 "Gender": input("Стать: ")
             }
             data.append(new_student)
-            file.seek(0)  # Переміщення вказівника на початок файлу
+            file.seek(0) 
             json.dump(data, file)
             print("Дані успішно додано!")
 
